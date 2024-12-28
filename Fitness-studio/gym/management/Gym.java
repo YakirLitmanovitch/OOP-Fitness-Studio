@@ -97,13 +97,13 @@ public class Gym {
                     secretary.getBalance(), "Secretary", secretary.getSalary()));
         }
         s.append("Gym Balance: " + balance+"\n");
-        s.append("\nClients Data: \n");
+        s.append("Clients Data:\n");
         for (Client client : clients) {
-            s.append(String.format("ID: %d | Name: %s | Gender: %s | Birthday: %s | Age: %d | Balance: %d \n",
+            s.append(String.format("ID: %d | Name: %s | Gender: %s | Birthday: %s | Age: %d | Balance: %d\n",
                     client.getId(), client.getName(), client.getGender(), client.getBirthDay(), sec.checkAge(client.getBirthDay()), client.getBalance()));
         }
         s.append("\n");
-        s.append("Employees Data: \n");
+        s.append("Employees Data:\n");
         for (Instructor instructor : allInstructorsEmployees) {
             StringBuilder sb = new StringBuilder();
             for (SessionType sessionType : instructor.getListType()) {
@@ -125,15 +125,15 @@ public class Gym {
                     secretary.getId(), secretary.getName(), secretary.getGender(), secretary.getBirthDay(), sec.checkAge(secretary.getBirthDay()),
                     secretary.getBalance(), "Secretary", secretary.getSalary()));
         }
-        s.append("\n");
-        s.append("Sessions Data: \n");
+        //s.append("\n");
+        s.append("Sessions Data:\n");
         for (Session session : allSessions) {
-            s.append(String.format("Session Type: %s | Date: %s | Forum: %s | Instructor: %s | Participants: %d/%d \n",
+            s.append(String.format("Session Type: %s | Date: %s | Forum: %s | Instructor: %s | Participants: %d/%d\n",
                     session.getType(), session.getDate(), session.getpType(), session.getInstructor().getName(), session.getClients().size(), session.getMaxParticipents()));
         }
         String result = s.toString();
         if (result.endsWith("\n")) {
-            result = result.substring(0, result.length() - 1);  // מסיר את האנטר האחרון
+            result = result.substring(0, result.length() - 1);  // Removing the last enter.
         }
         return result;
 
