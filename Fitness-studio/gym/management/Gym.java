@@ -97,7 +97,7 @@ public class Gym {
                     secretary.getBalance(), "Secretary", secretary.getSalary()));
         }
         s.append("Gym Balance: " + balance+"\n");
-        s.append("Clients Data:\n");
+        s.append("\nClients Data:\n");
         for (Client client : clients) {
             s.append(String.format("ID: %d | Name: %s | Gender: %s | Birthday: %s | Age: %d | Balance: %d\n",
                     client.getId(), client.getName(), client.getGender(), client.getBirthDay(), sec.checkAge(client.getBirthDay()), client.getBalance()));
@@ -126,7 +126,7 @@ public class Gym {
                     secretary.getBalance(), "Secretary", secretary.getSalary()));
         }
         //s.append("\n");
-        s.append("Sessions Data:\n");
+        s.append("\nSessions Data:\n");
         for (Session session : allSessions) {
             s.append(String.format("Session Type: %s | Date: %s | Forum: %s | Instructor: %s | Participants: %d/%d\n",
                     session.getType(), session.getDate(), session.getpType(), session.getInstructor().getName(), session.getClients().size(), session.getMaxParticipents()));
